@@ -1,0 +1,225 @@
+/* Reset some basic styles */
+body, h1, input, button, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body.dark-mode {
+    background-color: #111;
+    color: #f4f4f9;
+}
+
+body.dark-mode #quiz-container {
+    background: #222;
+    color: #f4f4f9;
+}
+
+body.dark-mode footer {
+    background-color: #111;
+    color: #999;
+}
+
+body.dark-mode input[type="text"] {
+    background-color: #222;
+    color: #f4f4f9;
+    border: 1px solid #555;
+}
+
+body.dark-mode input[type="text"]:focus {
+    border-color: #aaa;
+}
+
+body.dark-mode button {
+    background-color: #222;
+    border: 1px solid #555;
+    color: #f4f4f9;
+}
+
+body.dark-mode button:hover {
+    background-color: #555;
+}
+
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1001;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #005bb5;
+    transform: rotate(20deg);
+}
+
+#quiz-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #0073e6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #0073e6;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0073e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.result {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #0073e6;
+}
+
+.result.correct {
+    color: #28a745;
+}
+
+.result.incorrect {
+    color: #dc3545;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f4f4f9;
+}
+
+/* Styling for the "看答案模式" toggle */
+#toggle-answer-mode {
+    margin: 0px;
+    margin-right: 5px;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #0073e6;
+    cursor: pointer;
+}
+
+label input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* 赞赏二维码悬浮窗样式 */
+#donation-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    text-align: center;
+    z-index: 1000;
+    width: 120px;
+}
+
+/* 关闭按钮样式 */
+#close-donation {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+    outline: none;
+    padding: 0 5px;
+}
+
+#close-donation:hover {
+    color: #333;
+}
+
+/* 赞赏二维码图片样式 */
+#donation-float img {
+	margin-top: 10px;
+	margin-bottom: 0;
+    width: 90%;
+    border-radius: 5px;
+}
+
+/* 赞赏窗口的文字样式 */
+#donation-float p {
+    margin: 0;
+    padding-top: 0;
+    font-size: 10px;
+    color: #333;
+}
