@@ -5,44 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>作物识别大比拼！</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="favicon.png" type="image/png">
-    <!-- 分享信息，可恶，懒得写微信JSSDK了 -->
-    <meta property="og:title" content="作物识别大比拼！" />
-    <meta property="og:description" content="快来参加作物识别大比拼，看看你能认出多少种作物！" />
-    <meta property="og:image" content="https://s1.imagehub.cc/images/2024/12/02/7ce5a234806d90fc9711a957cd3ebf3c.jpeg" />
-    <meta property="og:url" content="https://quiz.spicyfish.cn" />
   </head>
-<body>
+  <body>
     <button id="dark-mode-toggle" onclick="toggleDarkMode()">&#127769;</button>
     <div id="quiz-container">
-        <h1>作物识别大比拼</h1>
-        <label>
-            <input type="checkbox" id="toggle-answer-mode" onclick="toggleAnswerMode()"> 看答案模式
-        </label>
-        <img id="quiz-image" src="" alt="Quiz Image">
-        <div>
-            <input type="text" id="answer-input" placeholder="输入你的答案">
-        </div>
-        <button id="submit-button" onclick="submitAnswer()">提交</button>
-        <div class="result" id="result"></div>
-        <button onclick="nextQuestion()">下一题</button>
+      <h1>作物识别大比拼</h1>
+      <label>
+        <input
+          type="checkbox"
+          id="toggle-answer-mode"
+          onclick="toggleAnswerMode()"
+        />
+        看答案模式
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          id="toggle-timer-mode"
+          onclick="toggleTimerMode()"
+        />
+        限时模式
+      </label>
+      <img id="quiz-image" src="" alt="Quiz Image" />
+      <div id="timer"></div>
+      <div>
+        <input type="text" id="answer-input" placeholder="输入你的答案" />
+        <button id="collect-button" onclick="toggleCollect()">收藏</button>
+      </div>
+      <button id="submit-button" onclick="submitAnswer()">提交</button>
+      <div class="result" id="result"></div>
+      <div id="desc"></div>
+      <button onclick="nextQuestion()">下一题</button>
+      <div id="score-info"></div>
+      <button onclick="showWrongBook()">错题本</button>
+      <button onclick="showRank()">排行榜</button>
+      <button onclick="showCollectBook()">我的收藏</button>
+      <div id="extra-panel"></div>
     </div>
-
-    <!-- 赞赏二维码悬浮窗 -->
-	<div id="donation-float">
-    	<button id="close-donation" onclick="closeDonationWindow()">×</button>
-    	<img src="qrcode.webp" alt="赞赏二维码">
-    	<p>建站不易 为爱发电</p>
-	</div>
-    <footer>
-        &copy; 2024 spicyfish. All rights reserved. v2.1-241206<br>
-        <a href="https://beian.miit.gov.cn" target="_blank" style="color: #999;">
-        京ICP备2023021042号</a> 
-        <a href="https://icp.gov.moe/?keyword=20246663" target="_blank" style="color: #999;">
-        萌ICP备20246663号</a>
-    </footer>
-
+    <footer>&copy; 2024 spicyfish. All rights reserved.</footer>
     <script src="quiz.js"></script>
-</body>
-
+  </body>
 </html>
